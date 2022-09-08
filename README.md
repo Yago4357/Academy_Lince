@@ -1,3 +1,2 @@
-# Academy_Lince
-
-Repositório destinado a atividades do Lince Tech Academy.
+# academy_semana_1
+Repositório destinado a primeira semana do Lince Tech Academy
