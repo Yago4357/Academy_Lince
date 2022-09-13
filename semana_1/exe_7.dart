@@ -26,8 +26,6 @@ int whileMode(List<int> num, int i, int soma) {
   return soma;
 }
 
-
-
 int recursionMode(List<int> num, int i) {
   if (i == 0) {
     return 0;
@@ -35,10 +33,6 @@ int recursionMode(List<int> num, int i) {
     return num[i - 1] + recursionMode(num, i - 1);
   }
 }
-
-
-
-
 
 int listMode(List<int> num, int i, int soma) {
   soma += num.reduce((i, j) => i + j);

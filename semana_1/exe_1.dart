@@ -6,10 +6,7 @@ void main() {
   int i =0;
 
   while(i<Raio.length) {
-    Peri = double.parse((2 * pi * Raio[i]).toStringAsFixed(2));
-    Area = double.parse((pi * (Raio[i] * Raio[i])).toStringAsFixed(2));
-
-    print("Raio: ${Raio[i]}, área: $Area, perímetro: $Peri.");
+    print("Raio: ${Raio[i]}, área: ${double.parse((pi * (Raio[i] * Raio[i])).toStringAsFixed(2))}, perímetro: ${double.parse((2 * pi * Raio[i]).toStringAsFixed(2))}.");
     i++;
   }
 }
