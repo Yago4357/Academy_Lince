@@ -85,3 +85,5 @@ class Musicas {
         'Duração em Segundos: ${duracao[i]}\n');
   }
 }
+
+//Código com a lógica certa mas feita da forma errada, segui o mentor durante a mentoria mas esqueci de copiar a correção e esqueci de como implementar ela.
