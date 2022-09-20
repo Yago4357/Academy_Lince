@@ -50,7 +50,8 @@ void main() {
   }
 }
 
-abstract class Formas{ //Objetivos 1 e 2 Concluidos.
+abstract class Formas {
+  //Objetivos 1 e 2 Concluidos.
   final String nome;
   final double? lado;
   final int? nLados;
@@ -59,7 +60,8 @@ abstract class Formas{ //Objetivos 1 e 2 Concluidos.
 }
 
 /// Representa a forma geometrica "círculo"
-class Circulo extends Formas { //Objetivos 1 e 2 Concluidos.
+class Circulo extends Formas {
+  //Objetivos 1 e 2 Concluidos.
   /// Construtor padrão, recebe o [raio] do círculo.
   Circulo(super.nome, this.raio);
   final double raio;
@@ -118,19 +120,22 @@ abstract class Triangulo extends Formas {
 
 /// Representa a forma geometrica "trianguloEquilatero", figura fechada
 /// e plana formado por três lados iguais.
-class TrianguloEquilatero extends Triangulo { //Objetivo 4 Concluido.
+class TrianguloEquilatero extends Triangulo {
+  //Objetivo 4 Concluido.
   TrianguloEquilatero(super.nome, super.altura, super.base, super.ladoA);
 }
 
 /// Representa a forma geometrica "trianguloEquilatero", figura fechada
 /// e plana formado por três lados e possui um angulo com 90 graus.
-class TrianguloRetangulo extends Triangulo { //Objetivo 5 Concluido.
+class TrianguloRetangulo extends Triangulo {
+  //Objetivo 5 Concluido.
   TrianguloRetangulo(super.nome, super.altura, super.base, super.ladoA);
 }
 
 /// Representa a forma geometrica "pentagono", figura geométrica
 /// formada por cinco ângulos e lados.
-class Pentagono extends Formas { //Objetivo 6 Concluido.
+class Pentagono extends Formas {
+  //Objetivo 6 Concluido.
   final double apotema;
 
   Pentagono(super.nome, lado, nLados, this.apotema);
@@ -141,7 +146,8 @@ class Pentagono extends Formas { //Objetivo 6 Concluido.
 
 /// Representa a forma geometrica "hexagono", figura geométrica
 /// formada por seis ângulos e lados.
-class Hexagono extends Formas { //Objetivo 7 Concluido.
+class Hexagono extends Formas {
+  //Objetivo 7 Concluido.
   Hexagono(nome, lado, super.nLados);
 
   double get area => ((math.pow((3 * lado!), 2) * math.sqrt(3)) / 2);
@@ -149,7 +155,8 @@ class Hexagono extends Formas { //Objetivo 7 Concluido.
 }
 
 /// Compara caracteristicas de formas geometricas
-class ComparadorFormasGeometricas{ // Objetivo 3 completo.
+class ComparadorFormasGeometricas {
+  // Objetivo 3 completo.
   /// Retorna o circulo com a maior area, ou [formaA] caso as areas sejam
   /// iguais
   getArea(final formaA, final formaB) {
@@ -158,8 +165,9 @@ class ComparadorFormasGeometricas{ // Objetivo 3 completo.
     } else if (formaB.area > formaA.area) {
       return formaB;
     }
-      return formaA;
+    return formaA;
   }
+
   /// Retorna o retangulo com o maior perimetro, ou [formaA] caso os
   /// perimetros sejam iguais
   getPerimetro(final formaA, final formaB) {

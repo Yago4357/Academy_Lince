@@ -28,18 +28,18 @@ MeioDeComunicacao aleatorio() {
 class MeioDeComunicacao {
   fazerLigacao(String telefone) {
     String a = aleatorio().toString();
-      int x = 0;
-        if ( x == a.compareTo("Instance of 'Orelhao'")){
-        Orelhao().printar(telefone);
-      }
-      if ( x == a.compareTo("Instance of 'Telefone'")){
-        Telefone().printar(telefone);
-      }
-      if ( x == a.compareTo("Instance of 'Celular'")){
-        Celular().printar(telefone);
-      }
+    int x = 0;
+    if (x == a.compareTo("Instance of 'Orelhao'")) {
+      Orelhao().printar(telefone);
+    }
+    if (x == a.compareTo("Instance of 'Telefone'")) {
+      Telefone().printar(telefone);
+    }
+    if (x == a.compareTo("Instance of 'Celular'")) {
+      Celular().printar(telefone);
     }
   }
+}
 
 class Orelhao extends MeioDeComunicacao {
   printar(String telefone) {
