@@ -2,16 +2,10 @@ import 'dart:math';
 
 void main() {
   final pessoa = Pessoa();
-
-  final fornecedor = [
-    FornecedorDeBebidas(),
-    FornecedorDeBolos(),
-    FornecedorDeSaladas(),
-    FornecedorDeSanduiches(),
-    FornecedorDeUltraCaloricos(),
-    FornecedorDePetiscos()
+  final fornecedor = [[<Produto>[
+    Produto('Ultra-caloricos', 500)],
+    [<Produto>[Produto('Agua', 0)]],Produto('Bolo de cenoura sem cobertura', 227),
   ];
-
   final random = Random();
   int refeicoes = 0;
 
@@ -29,6 +23,12 @@ void main() {
   pessoa.refeicoes(_calorias, refeicoes);
 }
 
+class Fornecedor {
+  final _random = Random();
+
+  
+}
+
 class Produto {
   Produto(this.nome, this.calorias);
 
@@ -40,100 +40,6 @@ class Produto {
 }
 
 enum Status { deficitExtremo, deficit, satisfeita, excesso }
-
-class FornecedorDeBebidas {
-  final _random = Random();
-  final _bebidasDisponiveis = <Produto>[
-    Produto('Agua', 0),
-    Produto('Refrigerante', 200),
-    Produto('Suco de fruta', 100),
-    Produto('Energetico', 135),
-    Produto('Café', 60),
-    Produto('Cha', 35),
-  ];
-
-  Produto fornecer() {
-    return _bebidasDisponiveis[_random.nextInt(_bebidasDisponiveis.length)];
-  }
-}
-
-class FornecedorDeBolos {
-  //Objetivo 1 Concluido 1/5
-  final _random = Random();
-  final _bolosDisponiveis = <Produto>[
-    Produto('Bolo de cenoura sem cobertura', 227),
-    Produto('Bolo de chocolate com recheio e calda de chocolate', 540),
-    Produto('Bolo de banana', 295),
-    Produto('Bolo de limão', 232),
-    Produto('Cupcake', 131),
-  ];
-
-  Produto fornecer() {
-    return _bolosDisponiveis[_random.nextInt(_bolosDisponiveis.length)];
-  }
-}
-
-class FornecedorDeSanduiches {
-  //Objetivo 1 Concluido 2/5
-  final _random = Random();
-  final _sanduichesDisponiveis = <Produto>[
-    Produto('Sanduíche de frango', 410),
-    Produto('Sanduíche de peixe', 431),
-    Produto('Sanduíche de presunto', 352),
-    Produto('Sanduíche de almôndega', 481),
-    Produto('Sanduíche de frango teriyaki', 367),
-  ];
-
-  Produto fornecer() {
-    return _sanduichesDisponiveis[
-        _random.nextInt(_sanduichesDisponiveis.length)];
-  }
-}
-
-class FornecedorDeSaladas {
-  //Objetivo 1 Concluido 3/5
-  final _random = Random();
-  final _saladasDisponiveis = <Produto>[
-    Produto('Salada de Folhas', 28),
-    Produto('Salada Crua', 25),
-    Produto('Salada Cozida', 70),
-    Produto('Salada Verde Mista', 9),
-    Produto('Salada Vinagrete', 89),
-  ];
-
-  Produto fornecer() {
-    return _saladasDisponiveis[_random.nextInt(_saladasDisponiveis.length)];
-  }
-}
-
-class FornecedorDePetiscos {
-  //Objetivo 1 Concluido 4/5
-  final _random = Random();
-  final _petiscosDisponiveis = <Produto>[
-    Produto('Amendoim japonês', 100),
-    Produto('Baconzitos', 126),
-    Produto('Batata ruffles', 141),
-    Produto('Bolinho de bacalhau', 170),
-    Produto('Cebolitos', 123),
-  ];
-
-  Produto fornecer() {
-    return _petiscosDisponiveis[_random.nextInt(_petiscosDisponiveis.length)];
-  }
-}
-
-class FornecedorDeUltraCaloricos {
-  //Objetivo 1 Concluido 5/5
-  final _random = Random();
-  final _ultraCaloricosDisponiveis = <Produto>[
-    Produto('Ultra-caloricos', 500),
-  ];
-
-  Produto fornecer() {
-    return _ultraCaloricosDisponiveis[
-        _random.nextInt(_ultraCaloricosDisponiveis.length)];
-  }
-}
 
 class Pessoa {
   Status caloriasStatus = Status.deficit;

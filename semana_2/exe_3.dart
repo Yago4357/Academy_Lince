@@ -25,6 +25,7 @@ class Musicas {
     'The Game',
     'The Game'
   ];
+
   List<int> duracao = [199, 187, 201, 198];
   int duracaoTotal = 0;
   void printar() {
